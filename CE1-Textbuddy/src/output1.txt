@@ -1,0 +1,33 @@
+Welcome to TextBuddy. test.txt is ready for use 
+command: test.txt is empty
+command: Invalid Format
+command: Invalid Format
+command: Invalid Format
+command: Invalid Format
+command: test.txt is empty
+command: added to test.txt: "little brown fox"
+command: 1. little brown fox
+command: added to test.txt: "jumped over the moon"
+command: added to test.txt: "into the pond"
+command: 1. little brown fox
+2. jumped over the moon
+3. into the pond
+command: deleted from test.txt: "jumped over the moon"
+command: 1. little brown fox
+2. into the pond
+command: all content deleted from test.txt
+command: test.txt is empty
+command: added to test.txt: "CS2103T"
+command: added to test.txt: "CS2101"
+command: added to test.txt: "CS1020"
+command: added to test.txt: "cs1010"
+command: 1. CS2103T
+2. CS2101
+3. CS1020
+4. cs1010
+command: deleted from test.txt: "cs1010"
+command: 1. CS2103T
+2. CS2101
+3. CS1020
+command: all content deleted from test.txt
+command: 
