@@ -1,3 +1,4 @@
+package textbuddy;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -72,7 +73,7 @@ public class TextBuddy {
 	private static String filePath;
 
 	public static void main(String[] args) {
-		filePath="test.txt";
+		filePath=args[0];
 		showToUser(MESSAGE_WELCOME,filePath,"");
 		openFile(filePath);
 		while (true) {
@@ -175,7 +176,7 @@ public class TextBuddy {
 	/**
 	 * This operation is used to add new line
 	 */
-	private static void addLine(String line) {
+	static void addLine(String line) {
 		buffer.add(line.substring(line.indexOf(' ')+1));
 		showToUser(MESSAGE_ADDED,filePath,line.substring(line.indexOf(' ')+1));
 	}
@@ -183,7 +184,7 @@ public class TextBuddy {
 	/**
 	 * This operation is used to delete line
 	 */
-	private static void deleteLine(String userCommand) {
+	static void deleteLine(String userCommand) {
 		String temp="";
 		int lineNumber=Integer.parseInt(userCommand.split(" ")[1])-1;
 		if (lineNumber<0||lineNumber>buffer.size()-1){
@@ -199,7 +200,7 @@ public class TextBuddy {
 	/**
 	 * This operation is used to clear all lines
 	 */
-	private static void clearAll(){
+	static void clearAll(){
 		buffer.clear();
 		showToUser(MESSAGE_CLEARED,filePath,"");
 	}
@@ -244,5 +245,10 @@ public class TextBuddy {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	@SuppressWarnings("unused")
+	static int getBufferSize(){
+		return buffer.size();
 	}
 }
